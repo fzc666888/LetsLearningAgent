@@ -43,7 +43,7 @@ Python 工程脚手架 + FastAPI 带测试小 API + 一次真实 LLM 调用。
 - [x] 环境 README
 - [x] pytest
 - [x] CRUD
-- [ ] 分层测试
+- [x] 分层测试
 - [ ] Docker
 - [ ] LLM hello
 
