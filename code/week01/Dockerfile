@@ -1,9 +1,9 @@
-FROM continuumio/miniconda3:26.7.1-1
+FROM anaconda/miniconda:26.9.4
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     CONDA_PLUGINS_AUTO_ACCEPT_TOS=yes \
-    PATH="/opt/conda/envs/LearningAgent/bin:${PATH}"
+    PATH="/opt/miniconda3/envs/LearningAgent/bin:${PATH}"
 
 WORKDIR /app
 
@@ -23,4 +23,4 @@ USER app
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["/opt/miniconda3/envs/LearningAgent/bin/uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

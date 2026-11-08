@@ -37,7 +37,7 @@ conda activate LearningAgent
 
 ### Docker
 
-镜像基于 Miniconda。容器内 uvicorn 监听 `0.0.0.0:8000`，Compose 把该端口映射到宿主机 `8000`。构建上下文排除 `.env`，密钥留在本机环境变量中。
+镜像使用 `anaconda/miniconda`，按 `environment.yml` 创建环境 `LearningAgent`。容器内 uvicorn 监听 `0.0.0.0:8000`，Compose 把该端口映射到宿主机 `8000`。构建上下文排除 `.env`，密钥留在本机环境变量中。
 
 ```bash
 cd code/week01
