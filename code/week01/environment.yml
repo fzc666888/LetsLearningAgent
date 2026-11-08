@@ -1,0 +1,12 @@
+# 与 requirements.txt 的版本范围一致，并固定 Python 3.12。
+name: LearningAgent
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - fastapi>=0.115.0
+      - uvicorn>=0.32.0
+      - httpx2>=2.0.0
+      - pytest>=8.0.0
