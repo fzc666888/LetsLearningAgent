@@ -48,3 +48,14 @@ docker compose down
 ```
 
 验收：`/health` 状态码为 200，响应体为 `{"status":"ok"}`。`docker compose down` 停止并移除这次启动的容器。启动前让宿主机 8000 端口空闲。
+
+### 模型调用
+
+`scripts/llm_hello.py` 调用 DeepSeek 的 OpenAI 兼容接口，发送一句短提示，并打印回复、`prompt_tokens` 和 `completion_tokens`。密钥从 `DEEPSEEK_API_KEY` 读取。未另外设置时，地址是 `https://api.deepseek.com`，模型是 `deepseek-chat`。密钥不要写入文件。
+
+```bash
+conda activate LearningAgent
+cd code/week01
+export DEEPSEEK_API_KEY="你的 DeepSeek 密钥"
+python scripts/llm_hello.py
+```
